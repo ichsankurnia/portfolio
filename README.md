@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+### Tailwind Setup
+
+`npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
+
+`npm install @craco/craco`
+
+create a craco.config.js at the root of our project and add the tailwindcss and autoprefixer as PostCSS plugins
+
+`npx tailwindcss-cli@latest init --full`
+
+
+#### Issue on setup tailwind
+
+`npm uninstall tailwindcss postcss autoprefixer`
+
+`npm install tailwindcss@latest postcss@latest autoprefixer@latest`
+
+
+`npx tailwindcss init --full`
+
+
+`npm uninstall tailwindcss postcss autoprefixer`
+
+`npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
