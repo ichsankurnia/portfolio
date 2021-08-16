@@ -70,6 +70,8 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      float: 'float 3s infinite',
+      refloat: 'refloat 3s infinite'
     },
     backdropBlur: (theme) => theme('blur'),
     backdropBrightness: (theme) => theme('brightness'),
@@ -266,6 +268,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      dosis: ['Dosis']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -474,6 +477,34 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      float: {
+        '0%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'ease-in-out',
+        },
+        '50%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'ease-in-out',
+        },
+        '100%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'ease-in-out',
+        },
+      },
+      refloat: {
+        '0%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'ease-in-out',
+        },
+        '50%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'ease-in-out',
+        },
+        '100%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'ease-in-out',
         },
       },
     },
@@ -724,6 +755,9 @@ module.exports = {
       500: '500ms',
       700: '700ms',
       1000: '1000ms',
+      1500: '1500ms',
+      2000: '2000ms',
+      2500: '2500ms',
     },
     transitionProperty: {
       none: 'none',
