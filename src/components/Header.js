@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Typical from 'react-typical'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import content from '../content';
 import { Link as ScrollLink } from 'react-scroll';
+import useStartAnimation from '../hooks/useStartAnimation';
 
 const Header = () => {
-    const [animated, setAnimated] = useState(false)
-
-    useEffect(() => {
-        setAnimated(true)
-    }, [])
+    const animated = useStartAnimation()
 
     return (
         <div
@@ -39,7 +36,7 @@ const Header = () => {
                             loop={Infinity}
                         />
                     </h1>
-                    <ScrollLink to='stack' smooth={true}>
+                    <ScrollLink to='about' smooth={true}>
                         <button className='bg-indigo-500 px-10 py-3 text-xl mt-10 uppercase rounded-lg animate-float hover:bg-indigo-300'>{content.header.btnText}</button>
                     </ScrollLink>
                 </div>
