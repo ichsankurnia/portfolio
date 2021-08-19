@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Link as ScrollLink } from 'react-scroll';
 import content from '../content'
 
 const Contact = () => {
@@ -11,7 +12,7 @@ const Contact = () => {
     }, [])
 
     return (
-        <div className='min-h-screen flex justify-center items-center'
+        <div className='min-h-screen flex justify-center items-center relative'
             style={{backgroundColor: '#f5f5f5'}} id='mycontact'
         >
             <div className='w-full md:w-4/5 flex flex-col md:flex-row-reverse justify-around items-center md:rounded-xl shadow-soft'
@@ -36,6 +37,11 @@ const Contact = () => {
                     className='mt-10 mx-auto transition duration-3000 ease-in-out'
                 />
             </div>
+            <ScrollLink to='home'>
+                <button className='absolute right-5 bottom-5 font-bold text-white md:text-black font-dosis px-1 border-b-2 border-transparent hover:text-indigo-700 hover:border-indigo-500'>
+                    Back to Top
+                </button>
+            </ScrollLink>
         </div>
     )
 }

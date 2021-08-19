@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <div
-            className='min-h-screen flex justify-center items-center' 
+            className='min-h-screen flex justify-center items-center' id='home' 
             style={{backgroundColor: '#091c29'}}
         >
             <div className='w-10/12 mx-auto flex flex-col md:flex-row-reverse justify-between items-center'>
