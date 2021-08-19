@@ -26,6 +26,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      soft: '#f5f5f5',
+      darkblue: '#091c29'
     },
     spacing: {
       px: '1px',
@@ -166,6 +168,7 @@ module.exports = {
       xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      soft: '20px 20px 35px #d0d0d0, -20px -20px 35px #ffffff',
       none: 'none',
     },
     caretColor: (theme) => theme('colors'),
@@ -758,6 +761,7 @@ module.exports = {
       1500: '1500ms',
       2000: '2000ms',
       2500: '2500ms',
+      3000: '3000ms',
     },
     transitionProperty: {
       none: 'none',
