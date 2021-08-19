@@ -23,7 +23,7 @@ const Work = () => {
                 </div>
                 <div className='w-full sm:w-full md:w-9/12 mt-5'>
                     {works.map((data, index) => (
-                        <div className={`relative flex flex-col p-3 border-indigo-600 md:border-b-4 ${index % 2 === 0? 'border-l-4 md:items-start' : 'md:items-end md:border-r-4 md:text-right'}`}>
+                        <div key={index} className={`relative flex flex-col p-3 border-indigo-600 md:border-b-4 ${index % 2 === 0? 'border-l-4 md:items-start' : 'md:items-end md:border-r-4 md:text-right'}`}>
                             <h1 className={`absolute top-0 bg-indigo-600 w-max p-2.5 text-white shadow-2xl text-2xl ${index % 2 === 0? 'left-0' : 'md:right-0'}`}>{data.date}</h1>
                             <h1 className='pt-14 font-bold text-3xl'>{data.office}</h1>
                             <h2 className='text-xl font-bold text-indigo-500'>{data.position}</h2>
