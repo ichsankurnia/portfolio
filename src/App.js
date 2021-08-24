@@ -3,7 +3,7 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Project from "./components/Project";
-import Stack from "./components/Stack";
+// import Stack from "./components/Stack";
 import Work from "./components/Work";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 			<Navigation />
 			<Header />
 			<About />
-			<Stack />
+			{/* <Stack /> */}
 			<Work />
 			<Project />
 			<Contact />
