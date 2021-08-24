@@ -19,7 +19,7 @@ const Contact = () => {
                 style={{backgroundColor: '#091c29'}}
             >
                 <div className={`${animated? '': 'translate-y-20 opacity-0'} transform transition duration-3000 text-white font-dosis w-4/5 md:w-2/5 mt-5`}>
-                    <h1 className='font-bold text-5xl animate-pulse'>{content.contact.title}</h1>
+                    <h1 className='font-bold text-5xl animate-pulse1s'>{content.contact.title}</h1>
                     <p className='text-2xl mt-5'>{content.contact.desc}</p>
                     <div className="flex justify-start">
                         {content.contact.socials.map((sosmed, index) => (
@@ -35,12 +35,12 @@ const Contact = () => {
                     src={content.contact.img} 
                     placeholderSrc={content.contact.imgPlaceholder} 
                     alt="" effect='blur' 
-                    width="300px"
-                    className='mt-10 mx-auto transition duration-3000 ease-in-out'
+                    width="250px"
+                    className='my-10 mx-auto transition duration-3000 ease-in-out'
                 />
             </div>
-            <ScrollLink to='home'>
-                <button className='absolute right-5 bottom-5 font-bold text-white md:text-black font-dosis px-1 border-b-2 border-transparent hover:text-indigo-700 hover:border-indigo-500'>
+            <ScrollLink to='home' smooth={true}>
+                <button className='absolute right-5 bottom-2 font-bold text-white md:text-black font-dosis px-1 border-b-2 border-transparent hover:text-indigo-700 hover:border-indigo-500'>
                     Back to Top
                 </button>
             </ScrollLink>

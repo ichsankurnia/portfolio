@@ -15,7 +15,7 @@ const Header = () => {
             style={{backgroundColor: '#091c29'}}
         >
             <div className='w-10/12 mx-auto flex flex-col md:flex-row-reverse justify-between items-center'>
-                <div className='w-full md:w-2/5'>
+                <div className='w-full md:w-2/6'>
                     <LazyLoadImage 
                         effect='blur'
                         src={content.header.img}
