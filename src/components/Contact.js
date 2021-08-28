@@ -23,9 +23,13 @@ const Contact = () => {
                     <p className='text-2xl mt-5'>{content.contact.desc}</p>
                     <div className="flex justify-start">
                         {content.contact.socials.map((sosmed, index) => (
-                            <a key={index} className='mr-2' href={`${sosmed.url}`}>
+                            <a key={index} href={`${sosmed.url}`} className='mx-2 my-5'>
                                 <span>
-                                    <LazyLoadImage src={sosmed.img} alt={sosmed.alt} effect='blur' width="50px" className="m-2" />
+                                    <LazyLoadImage 
+                                        src={sosmed.img} alt={sosmed.alt} effect='blur' width="50px" 
+                                        placeholderSrc={content.contact.socials[2].img}
+                                        className={`${index%2===0? 'animate-newbounce' : 'animate-rebounce'}`} 
+                                    />
                                 </span>
                             </a>
                         ))}
