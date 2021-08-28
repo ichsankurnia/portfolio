@@ -3,12 +3,20 @@ import { Link as ScrollLink } from 'react-scroll'
 import content from '../content'
 import useStartAnimation from '../hooks/useStartAnimation'
 
+/**
+ * Z-20 nav
+ * z-10 project card
+ * z-30 project modal wrapper
+ * z-50 procjet modal content
+ * 
+ */
+
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false)
     const animate = useStartAnimation()
 
     return (
-        <div style={{backgroundColor: '#091c29'}} className='fixed top-0 w-screen z-50'>
+        <div style={{backgroundColor: '#091c29'}} className='fixed top-0 w-screen z-20'>
             <div className="w-10/12 mx-auto py-3 flex items-center justify-between text-white font-dosis">
                 <ScrollLink to='home' smooth={true} className={`${animate? '': '-translate-x-20 opacity-0'} transform transition duration-2500 text-3xl font-bold cursor-pointer`}>
                     <h1>{content.nav.logo}{' '}
@@ -40,19 +48,19 @@ const Navigation = () => {
                 </div>
             </div>
             {isOpen &&
-                <NavMobile />
+                <NavMobile onClick={() => setIsOpen(false)} />
             }
         </div>
     )
 }
 
-const NavMobile = () => {
+const NavMobile = ({onClick}) => {
     const animate = useStartAnimation()
 
     return (
         <div className={`md:hidden flex flex-col text-white font-dosis w-11/12 mx-auto pl-2 pb-5 ${animate? '': 'translate-x-60 -translate-y-7 opacity-0'} transform transition duration-1000`}> 
             {content.nav.links.map((link, index) => (
-                <ScrollLink to={link.to} smooth={true} key={index} className='px-3 py-1 cursor-pointer rounded-md hover:bg-indigo-600'>
+                <ScrollLink to={link.to} smooth={true} key={index} className='px-3 py-1 cursor-pointer rounded-md hover:bg-indigo-600' onClick={onClick}>
                     <span className='font-bold text-lg'>{link.text}</span>
                 </ScrollLink>
             ))}
