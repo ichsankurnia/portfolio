@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link as ScrollLink } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import content from '../content'
@@ -7,11 +8,17 @@ import projectContent from '../content/projectContent';
 
 const Project = () => {
     const [modal, setModal] = useState(false)
+    const [privateProjct, setPrivateProject] = useState(false)
     const [selectedPrject, setSelectedProject] = useState(null)
 
     const handleOpenModal = (data) => {
-        setSelectedProject(data)
-        setModal(true)
+        console.log(data)
+        if(data?.private){
+            setPrivateProject(true)
+        }else{
+            setSelectedProject(data)
+            setModal(true)
+        }
     }
 
     return (
@@ -30,17 +37,19 @@ const Project = () => {
                     <div className='flex flex-wrap justify-center items-center w-full md:w-4/5'>
                     {company.projects.map((proj, j) => (
                         <div key={j} className='w-full md:w-2/5 m-7 flex flex-col items-center justify-center'>
-                            <LazyLoadImage effect='blur' alt='' src={proj.img_thumb} className=' shadow-soft rounded-md' />
-                            <div className='flex flex-col items-center bg-white rounded-lg shadow-2xl py-3 px-4 w-88 -mt-20 z-10'>
+                            <LazyLoadImage effect='blur' alt='' src={proj.img_thumb} className='shadow-soft rounded-md' style={{maxHeight: 275}} />
+                            <div className='flex flex-col text-center items-center bg-white rounded-lg shadow-2xl py-3 px-4 w-88 -mt-20 z-10'>
                                 <h2 className='font-bold text-lg md:text-xl'>{proj.title}</h2>
                                 <p className='text-center text-sm md:text-md mt-2 w-11/12'>{proj.short_desc}</p>
-                                <div className='mt-2'>
+                                <div className='mt-2 w-full flex flex-wrap justify-center'>
                                 {proj.tools_tech.map((tool, k) => (
-                                    <span key={k} 
-                                        className='text-sm border-1 text-indigo-400 border-indigo-700 px-2 rounded-md m-1 cursor-help hover:bg-indigo-600 hover:text-white'
-                                    >
-                                        {tool}
-                                    </span>
+                                    <a key={k} href={`https://github.com/topics/${tool.toLowerCase() === 'c#'? 'csharp' : tool.toLowerCase()}`}>
+                                        <span
+                                            className='text-sm border-1 text-indigo-400 border-indigo-700 px-2 rounded-md m-1 cursor-help hover:bg-indigo-600 hover:text-white'
+                                        >
+                                            {tool}
+                                        </span>
+                                    </a>
                                 ))}
                                 </div>
                                 <button className='bg-indigo-600 text-white px-6 py-1 rounded-2xl hover:bg-indigo-900 mt-4 -mb-7' onClick={() => handleOpenModal(proj)}>See More ➡</button>
@@ -52,18 +61,22 @@ const Project = () => {
             ))}
             </div>
             {modal && <ModalProject onClose={() => setModal(false)} project={selectedPrject} />}
+            {privateProjct && <PrivateProject onClose={() => setPrivateProject(false)} />}
         </div>
+        // <div className='min-h-screen flex flex-col items-center justify-evenly font-dosis bg-soft' id='myproject'>
+        //     <h1 className='text-4xl font-bold'>My Project</h1>
+        //     <p className='text-xl'>Coming soon..</p>
+        // </div>
     )
 }
 
 const ModalProject = ({project, onClose}) => {
     return (
-        <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-30 overflow-auto">
+        <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-30">
             <div className="absolute w-full h-full bg-gray-900 opacity-50" onClick={onClose}></div>
 
             {/* Modal Content */}
-            <div className="bg-soft w-11/12 md:w-9/12 mx-auto my-auto rounded shadow-2xl z-50 overflow-y-auto">
-                <div className="py-4 px-6 text-left">
+            <div className="bg-soft w-11/12 md:w-9/12 mx-auto my-auto py-4 px-6 text-left overflow-y-auto rounded shadow-2xl z-50" style={{ maxHeight: '98vh'}}>
                     {/* Title */}
                     <div className="flex justify-between items-center mb-3">
                         <p className="text-lg md:text-xl font-bold">Detail Project</p>
@@ -78,8 +91,8 @@ const ModalProject = ({project, onClose}) => {
                     {/* Body */}
                     <div className='flex flex-col items-center'>
                     {project.list_img.map((data, index) => (
-                        <div key={index}>
-                            <LazyLoadImage src={data.img} effect='blur' alt="" />
+                        <div key={index} className='mb-10 text-center'>
+                            <LazyLoadImage src={data.img} effect='blur' alt="" style={{maxHeight: 500}} />
                             <p className='text-sm md:text-base'>{data.img_desc}</p>        
                         </div>
                     ))}
@@ -87,12 +100,33 @@ const ModalProject = ({project, onClose}) => {
                     {/* End Body */}
 
                     {/* Footer */}
-                    <div className="flex justify-end pt-2">
+                    <div className="flex justify-end">
                         <button className="px-4 bg-indigo-500 py-2 rounded-lg text-white hover:bg-black" onClick={onClose}>Close</button>
                     </div>
                     {/* End Footer */}
+            </div>
+            {/* End Modal Content */}
 
+        </div>
+    )
+}
+
+
+const PrivateProject = ({onClose}) => {
+    return (
+        <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-30 overflow-auto">
+            <div className="absolute w-full h-full bg-gray-900 opacity-50" onClick={onClose}></div>
+
+            {/* Modal Content */}
+            <div className="bg-soft w-11/12 md:w-3/5 mx-auto my-auto py-4 px-6 rounded shadow-2xl z-50 overflow-y-auto">
+                {/* Body */}
+                <div className='flex flex-col justify-center items-center text-center'>
+                    <h1 className='text-lg md:text-2xl mb-5' >Oops.. this project is private due to confidential of the company and client, contact me for further information</h1>
+                    <ScrollLink to='mycontact' smooth={true}>
+                        <button className='px-4 py-2 bg-indigo-500 rounded-lg text-white hover:bg-black' onClick={onClose}>Contact Me</button>
+                    </ScrollLink>
                 </div>
+                {/* End Body */}
             </div>
             {/* End Modal Content */}
 
