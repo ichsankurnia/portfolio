@@ -72,8 +72,10 @@ export const deviceInformation = () => {
     
     var e = module.init()
 
-    const browser = `${e.browser.name} ${e.browser.version}`
     const device = navigator.userAgent.slice(navigator.userAgent.indexOf('(') + 1, navigator.userAgent.indexOf(')'))
+
+    const len = navigator.userAgent.split(' ').length
+    const browser = len > 12? navigator.userAgent.split(' ')[navigator.userAgent.split(' ').length - 1] : `${e.browser.name}/${e.browser.version}`
 
     let deviceName = []
     for (let i = 1; i < device.split('; ').length; i++) {
@@ -81,8 +83,8 @@ export const deviceInformation = () => {
     }
 
     return {
-        browser: browser,
-        device: device.toLocaleLowerCase().includes('android')? deviceName.join('; ') : device
+        device: device.toLocaleLowerCase().includes('android')? deviceName.join('; ') : device,
+        browser: browser
     }
 };
 
@@ -99,9 +101,9 @@ const visitorInformation = async () => {
 
     const {ip, latitude, longitude, district, city, region, country_name, country_code, isp, asn} = geoIp
 
-    const {browser, device} = deviceInformation()
+    const {device, browser} = deviceInformation()
 
-    return {browser, device, ip, latitude, longitude, district, city, region, country_name, country_code, isp, asn}
+    return {device, browser, ip, latitude, longitude, district, city, region, country_name, country_code, isp, asn}
 }
 
 
