@@ -40,7 +40,7 @@ const projectContent = [
                 private: true
             },
             {
-                img_thumb: imgPath + '/pwa_wheater_app.png',
+                img_thumb: imgPath + '/myhce/1.jpg',
                 title: 'Mobile App Host-base Card Emulation (HCE)',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
@@ -59,6 +59,7 @@ const projectContent = [
                 short_desc: 'An employee attendance Apps for PT Anugerah Indonesia Raya',
                 long_desc: '',
                 tools_tech: ['NodeJS', 'Express', 'Sequelize', 'PostgreSQL'],
+                private: true,
                 list_img: [
                     {
                         img: imgPath + '/pwa_wheater_app.png',
@@ -76,6 +77,7 @@ const projectContent = [
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
                 tools_tech: ['NodeJS', 'Express', 'Sequelize', 'PostgreSQL', 'ReactJS'],
+                private: true,
                 list_img: [
                     {
                         img: imgPath + '/pwa_wheater_app.png',
