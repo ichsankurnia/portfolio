@@ -18,7 +18,7 @@ const Navigation = () => {
     return (
         <div style={{backgroundColor: '#091c29'}} className='fixed top-0 w-screen z-20'>
             <div className="w-10/12 mx-auto py-3 flex items-center justify-between text-white font-dosis">
-                <ScrollLink to='home' smooth={true} className={`${animate? '': '-translate-x-20 opacity-0'} transform transition duration-2500 text-3xl font-bold cursor-pointer`}>
+                <ScrollLink to='home' smooth={true} className={`${animate? '': '-translate-x-20 opacity-0'} transform transition duration-2500 text-3xl font-bold cursor-pointer`} onClick={()=>window.location.reload()}>
                     <h1>{content.nav.logo}{' '}
                         <span className='w-3 h-3 bg-red-500 rounded-full inline-block'></span>
                     </h1>
@@ -54,7 +54,7 @@ const Navigation = () => {
     )
 }
 
-const NavMobile = ({onClick}) => {
+const NavMobile = ({onClick}: any) => {
     const animate = useStartAnimation()
 
     return (

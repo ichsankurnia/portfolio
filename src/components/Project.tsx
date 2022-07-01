@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import content from '../content'
 import projectContent from '../content/projectContent';
 
@@ -11,7 +10,7 @@ const Project = () => {
     const [privateProjct, setPrivateProject] = useState(false)
     const [selectedPrject, setSelectedProject] = useState(null)
 
-    const handleOpenModal = (data) => {
+    const handleOpenModal = (data: any) => {
         console.log(data)
         if(data?.private){
             setPrivateProject(true)
@@ -70,7 +69,7 @@ const Project = () => {
     )
 }
 
-const ModalProject = ({project, onClose}) => {
+const ModalProject = ({project, onClose}: any) => {
     return (
         <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-30">
             <div className="absolute w-full h-full bg-gray-900 opacity-50" onClick={onClose}></div>
@@ -90,7 +89,7 @@ const ModalProject = ({project, onClose}) => {
 
                     {/* Body */}
                     <div className='flex flex-col items-center'>
-                    {project.list_img.map((data, index) => (
+                    {project.list_img.map((data: any, index: number) => (
                         <div key={index} className='mb-10 text-center'>
                             <LazyLoadImage src={data.img} effect='blur' alt="" style={{maxHeight: 500}} />
                             <p className='text-sm md:text-base'>{data.img_desc}</p>        
@@ -112,7 +111,7 @@ const ModalProject = ({project, onClose}) => {
 }
 
 
-const PrivateProject = ({onClose}) => {
+const PrivateProject = ({onClose}: any) => {
     return (
         <div className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-30 overflow-auto">
             <div className="absolute w-full h-full bg-gray-900 opacity-50" onClick={onClose}></div>

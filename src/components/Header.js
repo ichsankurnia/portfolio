@@ -1,7 +1,6 @@
 import React from 'react'
 import Typical from 'react-typical'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import content from '../content';
 import { Link as ScrollLink } from 'react-scroll';
 import useStartAnimation from '../hooks/useStartAnimation';
