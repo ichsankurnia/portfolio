@@ -54,29 +54,59 @@ const projectContent = [
         desc: content.work.desc,
         projects: [
             {
+                img_thumb: imgPath + '/fms.png',
+                title: 'Agroobot - Farm Management System (FMS)',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Context-API', 'Redux', 'Typescript', 'TailwindCSS', 'CMS'],
+                private: true
+            },
+            {
+                img_thumb: imgPath + '/efaktur.png',
+                title: 'Electronic System Administration Pajak (eFaktur and File Manager Apps)',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Context-API', 'Recoil', 'Typescript', 'TailwindCSS', 'File-Manager', 'CMS'],
+                private: true
+            },
+            {
+                img_thumb: imgPath + '/molja.png',
+                title: 'Molja Furniture Web Admin',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Typescript', 'TailwindCSS', 'CMS'],
+                private: true,
+            },
+            {
+                img_thumb: imgPath + '/mou.png',
+                title: 'Memorandum of Understanding (MoU) Builder and Sign',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS', 'Syncfusion'],
+                private: true
+            },
+            {
+                img_thumb: imgPath + '/tiestani.png',
+                title: 'Tiestani Apps',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS'],
+                private: true
+            },
+            {
+                img_thumb: imgPath + '/agroobot.png',
+                title: 'Agroobot Web Apps',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS'],
+                private: true
+            },
+            {
                 img_thumb: imgPath + '/pwa_wheater_app.png',
                 title: 'Human Resource Information System (HRIS)',
                 short_desc: 'An employee attendance Apps for PT Anugerah Indonesia Raya',
                 long_desc: '',
                 tools_tech: ['NodeJS', 'Express', 'Sequelize', 'PostgreSQL'],
-                private: true,
-                list_img: [
-                    {
-                        img: imgPath + '/pwa_wheater_app.png',
-                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                    },
-                    {
-                        img: imgPath + '/pwa_wheater_app2.png',
-                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                    }
-                ]
-            },
-            {
-                img_thumb: imgPath + '/pwa_wheater_app.png',
-                title: 'IsMyRoom Appartment',
-                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-                long_desc: '',
-                tools_tech: ['NodeJS', 'Express', 'Sequelize', 'PostgreSQL', 'ReactJS'],
                 private: true,
                 list_img: [
                     {
@@ -278,21 +308,12 @@ const projectContent = [
         desc: content.work.desc,
         projects: [
             {
-                img_thumb: imgPath + '/pwa_wheater_app.png',
-                title: 'PWA Wheater App',
-                short_desc: 'Progressive Web App Wheater Application using ReactJS and Service Worker',
+                img_thumb: imgPath + '/google-calendar.png',
+                title: 'Google Calendar Clone',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'PWA', 'Service Worker'],
-                list_img: [
-                    {
-                        img: imgPath + '/pwa_wheater_app.png',
-                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                    },
-                    {
-                        img: imgPath + '/pwa_wheater_app2.png',
-                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-                    }
-                ]
+                tools_tech: ['ReactJS', 'Context-API', 'TailwindCSS'],
+                private: true
             },
             {
                 img_thumb: imgPath + '/wa-mern/8.png',
@@ -331,6 +352,27 @@ const projectContent = [
                     },
                     {
                         img: imgPath + '/wa-mern/8.png',
+                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                    }
+                ]
+            },
+            {
+                img_thumb: imgPath + '/tensorflow/3.png',
+                title: 'Tensorflow Build a Model Object Detection with Python',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+                long_desc: '',
+                tools_tech: ['Tensorflow', 'Object-Detection', 'Deep-Learning', 'Python', 'OpenCV'],
+                list_img: [
+                    {
+                        img: imgPath + '/tensorflow/1.png',
+                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                    },
+                    {
+                        img: imgPath + '/tensorflow/2.png',
+                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                    },
+                    {
+                        img: imgPath + '/tensorflow/3.png',
                         img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                     }
                 ]
@@ -375,7 +417,24 @@ const projectContent = [
                         img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                     }
                 ]
-            }
+            },
+            {
+                img_thumb: imgPath + '/pwa_wheater_app.png',
+                title: 'PWA Wheater App',
+                short_desc: 'Progressive Web App Wheater Application using ReactJS and Service Worker',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'PWA', 'Service Worker'],
+                list_img: [
+                    {
+                        img: imgPath + '/pwa_wheater_app.png',
+                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                    },
+                    {
+                        img: imgPath + '/pwa_wheater_app2.png',
+                        img_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+                    }
+                ]
+            },
         ]
     }
 ]

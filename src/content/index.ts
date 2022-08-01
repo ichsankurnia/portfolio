@@ -48,6 +48,22 @@ const content = {
 		  	alt: 'node',
 		},
 		{
+			img: process.env.PUBLIC_URL + '/assets/nextjs.png',
+		  	alt: 'nextjs',
+		},
+		{
+			img: process.env.PUBLIC_URL + '/assets/tailwind.png',
+		  	alt: 'tailwindcss',
+		},
+		{
+			img: process.env.PUBLIC_URL + '/assets/javascript.png',
+		  	alt: 'javascript',
+		},
+		{
+			img: process.env.PUBLIC_URL + '/assets/typescript.png',
+		  	alt: 'typescript',
+		},
+		{
 			img: process.env.PUBLIC_URL + '/assets/python.png',
 			  alt: 'python',
 		},
@@ -110,7 +126,7 @@ const content = {
 			{
 				alt: 'cv',
 				img: process.env.PUBLIC_URL + '/assets/cv.png',
-				url: process.env.PUBLIC_URL + '/assets/CV_Ichsan_Kurniawan.pdf'
+				url: process.env.PUBLIC_URL + '/assets/cv_ichsan_kurniawan_2022.pdf'
 			},
 		],
 		img:
