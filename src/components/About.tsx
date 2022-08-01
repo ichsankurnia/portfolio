@@ -8,7 +8,7 @@ const About = () => {
             <div className='w-11/12 md:w-2/5 flex flex-wrap justify-center mt-10 md:mt-0'>
                 {content.stack.tech.map((tech, index) => (
                     <span key={index} 
-                    className={`${index % 2 === 0? 'animate-float' : 'animate-refloat'} w-32 h-32 m-4 p-4 bg-soft shadow-soft flex justify-center items-center rounded-full`}>
+                    className={`${index % 2 === 0? 'animate-float' : 'animate-refloat'} w-32 h-32 m-4 p-4 bg-soft shadow-2xl hover:shadow flex justify-center items-center rounded-full cursor-pointer`}>
                         <LazyLoadImage src={tech.img} alt={tech.alt} effect='blur' />
                     </span>
                 ))}
