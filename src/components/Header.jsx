@@ -36,7 +36,7 @@ const Header = () => {
                         />
                     </h1>
                     <ScrollLink to='about' smooth={true}>
-                        <button className='bg-indigo-500 px-10 py-3 text-xl mt-10 uppercase rounded-lg animate-float hover:bg-indigo-300'>{content.header.btnText}</button>
+                        <button className='bg-indigo-500 px-10 py-3 text-xl mt-10 uppercase rounded-lg animate-float hover:bg-indigo-300 anim'>{content.header.btnText}</button>
                     </ScrollLink>
                 </div>
             </div>
