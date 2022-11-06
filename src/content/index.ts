@@ -80,21 +80,32 @@ const content = {
 		desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 		works: [
 			{
-				date: 'October 2019-Present',
-				company: 'PT Nutech Integrasi',
-				position: 'FrontEnd',
-				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				date: 'October 2019 - Present',
+				company: 'PT Nutech Integrasi (Telkom Group)',
+				position: 'Frontend Engineer',
+				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+				url: "https://www.nutech-integrasi.com"
 			},
 			{
-				date: 'August 2019-September 2019',
+				date: 'September 2021 - December 2021',
+				company: 'Agroobot',
+				position: 'Fullstack Engineer - Part-time',
+				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+				url: "https://agroobot.com"
+			},
+			{
+				date: 'August 2019 - September 2019',
 				company: 'BBTA3 BPPT',
-				position: 'Software Engineer',
-				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-			},{
-				date: 'July 2018-August 2018',
+				position: 'Software Engineer - Part-time',
+				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+				url: "https://puspiptek.brin.go.id/pdkp/balai/profile/B2TA3"
+			},
+			{
+				date: 'July 2018 - August 2018',
 				company: 'PT Mecoindo Itron',
 				position: 'Internship',
-				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+				url: "https://www.mecoindo-itron.com"
 			}
 		]
 	},
@@ -111,12 +122,17 @@ const content = {
 			{
 				alt: 'github',
 				img: process.env.PUBLIC_URL + '/assets/github.png',
-				url: 'https://github.com/ichsankurnia/'
+				url: 'https://github.com/ichsankurnia'
 			},
 			{
 				alt: 'link',
 				img: process.env.PUBLIC_URL + '/assets/link.png',
-				url: 'https://www.linkedin.com/in/ichsan-kurniawan-b850a3192/'
+				url: 'https://www.linkedin.com/in/ichsan-kurniawan-b850a3192'
+			},
+			{
+				alt: 'twiiter',
+				img: process.env.PUBLIC_URL + '/assets/twt.png',
+				url: 'https://twitter.com/ories___'
 			},
 			{
 				alt: 'gmail',

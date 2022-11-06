@@ -8,7 +8,7 @@ const projectContent = [
         desc: content.work.desc,
         projects: [
             {
-                img_thumb: imgPath + '/myg/1.png',
+                img_thumb: imgPath + '/myg/login-myg.png',
                 title: 'Vending Machine MyGraPARI Telkomsel',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
@@ -67,6 +67,14 @@ const projectContent = [
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 long_desc: '',
                 tools_tech: ['ReactJS', 'Context-API', 'Recoil', 'Typescript', 'TailwindCSS', 'File-Manager', 'CMS'],
+                private: true
+            },
+            {
+                img_thumb: imgPath + '/agrootech-agroomotion.png',
+                title: 'Agroobot - Agroomotion (Agrotech)',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS'],
                 private: true
             },
             {
