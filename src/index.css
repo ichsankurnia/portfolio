@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .anim {
+        @apply transition-all ease-in-out duration-500
+    }
+}

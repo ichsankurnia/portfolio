@@ -43,7 +43,7 @@ const Contact = () => {
                 />
             </div>
             <ScrollLink to='home' smooth={true}>
-                <button className='absolute right-5 bottom-2 font-bold text-white md:text-black font-dosis px-1 border-b-2 border-transparent hover:text-indigo-700 hover:border-indigo-500'>
+                <button className='absolute right-5 bottom-2 font-bold text-white md:text-black font-dosis px-1 border-b-2 border-transparent hover:text-indigo-700 hover:border-indigo-500 anim'>
                     Back to Top
                 </button>
             </ScrollLink>

@@ -44,14 +44,14 @@ const Project = () => {
                                 {proj.tools_tech.map((tool, k) => (
                                     <a key={k} href={`https://github.com/topics/${tool.toLowerCase() === 'c#'? 'csharp' : tool.toLowerCase()}`}>
                                         <span
-                                            className='text-sm border-1 text-indigo-400 border-indigo-700 px-2 rounded-md m-1 cursor-help hover:bg-indigo-600 hover:text-white'
+                                            className='text-sm border-1 text-indigo-400 border-indigo-700 px-2 rounded-md m-1 cursor-help hover:bg-indigo-600 hover:text-white anim'
                                         >
                                             {tool}
                                         </span>
                                     </a>
                                 ))}
                                 </div>
-                                <button className='bg-indigo-600 text-white px-6 py-1 rounded-2xl hover:bg-indigo-900 mt-4 -mb-7' onClick={() => handleOpenModal(proj)}>See More ➡</button>
+                                <button className='bg-indigo-600 text-white px-6 py-1 rounded-2xl hover:bg-indigo-900 mt-4 -mb-7 anim' onClick={() => handleOpenModal(proj)}>See More ➡</button>
                             </div>
                         </div>
                     ))}

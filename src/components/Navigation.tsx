@@ -26,7 +26,7 @@ const Navigation = () => {
                 <div className={`hidden md:block ${animate? '': 'translate-x-20 opacity-0'} transform transition duration-2500`}>
                 {content.nav.links.map((link, index) => (
                     <ScrollLink to={link.to} smooth={true} key={index}>
-                        <span className='font-bold text-lg mr-4 px-2 cursor-pointer border-b-2 border-transparent hover:border-blue-400'>{link.text}</span>
+                        <span className='font-bold text-lg mr-4 px-2 cursor-pointer border-b-2 border-transparent hover:border-blue-400 anim'>{link.text}</span>
                     </ScrollLink>
                 ))}
                 </div>
