@@ -12,7 +12,7 @@ const projectContent = [
                 title: 'Vending Machine MyGraPARI Telkomsel',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
-                tools_tech: ['C#', 'ReactJS', 'WebSocket'],
+                tools_tech: ['C#', 'ReactJS', 'WebSocket', 'Typescript', 'TailwindCSS', 'Kiosk'],
                 private: true
             },
             {
@@ -20,7 +20,7 @@ const projectContent = [
                 title: 'Vending Machine PT Railink (Kereta Bandara)',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'Redux'],
+                tools_tech: ['ReactJS', 'Redux', 'Kiosk'],
                 private: true
             },
             {
@@ -36,7 +36,7 @@ const projectContent = [
                 title: 'Vending Machine Bus Management System (BMS) Angkasa Pura II (AP2)',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
-                tools_tech: ['C#', 'WPF'],
+                tools_tech: ['C#', 'WPF', 'Kiosk'],
                 private: true
             },
             {
@@ -58,7 +58,7 @@ const projectContent = [
                 title: 'Agroobot - Farm Management System (FMS)',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'Context-API', 'Redux', 'Typescript', 'TailwindCSS', 'CMS'],
+                tools_tech: ['ReactJS', 'Context-API', 'Redux', 'Typescript', 'TailwindCSS', 'Dashboard', 'CMS'],
                 private: true
             },
             {
@@ -74,7 +74,7 @@ const projectContent = [
                 title: 'Agroobot - Agroomotion (Agrotech)',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS'],
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'Dashboard', 'CMS'],
                 private: true
             },
             {
@@ -98,7 +98,7 @@ const projectContent = [
                 title: 'Tiestani Apps',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'CMS'],
+                tools_tech: ['ReactJS', 'Redux', 'TailwindCSS', 'Dashboard', 'CMS'],
                 private: true
             },
             {
@@ -320,7 +320,7 @@ const projectContent = [
                 title: 'Google Calendar Clone',
                 short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
                 long_desc: '',
-                tools_tech: ['ReactJS', 'Context-API', 'TailwindCSS'],
+                tools_tech: ['ReactJS', 'Context-API', 'Typescript', 'TailwindCSS'],
                 private: true
             },
             {
