@@ -20,9 +20,9 @@ const Contact = () => {
                 <div className={`${animated? '': 'translate-y-20 opacity-0'} transform transition duration-3000 text-white font-dosis w-4/5 md:w-2/5 mt-5`}>
                     <h1 className='font-bold text-5xl animate-pulse1s'>{content.contact.title}</h1>
                     <p className='text-2xl mt-5'>{content.contact.desc}</p>
-                    <div className="flex justify-start">
+                    <div className="flex justify-center md:justify-start flex-wrap mt-5">
                         {content.contact.socials.map((sosmed, index) => (
-                            <a key={index} href={`${sosmed.url}`} className='mx-2 my-5'>
+                            <a key={index} href={`${sosmed.url}`} className='mx-2' target="_blank" rel="noopener noreferrer">
                                 <span>
                                     <LazyLoadImage 
                                         src={sosmed.img} alt={sosmed.alt} effect='blur' width="50px" 

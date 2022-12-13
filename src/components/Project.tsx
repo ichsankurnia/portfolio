@@ -42,7 +42,7 @@ const Project = () => {
                                 <p className='text-center text-sm md:text-md mt-2 w-11/12'>{proj.short_desc}</p>
                                 <div className='mt-2 w-full flex flex-wrap justify-center'>
                                 {proj.tools_tech.map((tool, k) => (
-                                    <a key={k} href={`https://github.com/topics/${tool.toLowerCase() === 'c#'? 'csharp' : tool.toLowerCase()}`}>
+                                    <a key={k} href={`https://github.com/topics/${tool.toLowerCase() === 'c#'? 'csharp' : tool.toLowerCase()}`} target="_blank" rel="noopener noreferrer">
                                         <span
                                             className='text-sm border-1 text-indigo-400 border-indigo-700 px-2 rounded-md m-1 cursor-help hover:bg-indigo-600 hover:text-white anim'
                                         >
@@ -117,7 +117,7 @@ const PrivateProject = ({onClose}: any) => {
             <div className="absolute w-full h-full bg-gray-900 opacity-50" onClick={onClose}></div>
 
             {/* Modal Content */}
-            <div className="bg-soft w-11/12 md:w-3/5 mx-auto my-auto py-4 px-6 rounded shadow-2xl z-50 overflow-y-auto">
+            <div className="bg-soft w-11/12 md:w-3/5 2xl:w-5/12 mx-auto my-auto py-4 px-6 rounded shadow-2xl z-50 overflow-y-auto">
                 {/* Body */}
                 <div className='flex flex-col justify-center items-center text-center'>
                     <h1 className='text-lg md:text-2xl mb-5' >Oops.. this project is private due to confidential of the company and client, contact me for further information</h1>
