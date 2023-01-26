@@ -468,7 +468,7 @@ export default defineConfig({
     // "process.env.PUBLIC_URL": process.env.npm_config_local_prefix,
   },
   build: {
-    outDir: '../dist'
+    outDir: '../build'
   }
 })
 ```
