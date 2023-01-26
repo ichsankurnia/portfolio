@@ -15,5 +15,8 @@ export default defineConfig({
   define: {
     "process.env": process.env,
     // "process.env.PUBLIC_URL": process.env.npm_config_local_prefix,
+  },
+  build: {
+    outDir: '../dist'
   }
 })
