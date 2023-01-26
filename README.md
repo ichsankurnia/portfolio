@@ -69,6 +69,7 @@ npm i -D @types/node @types/react-lazy-load-image-component @types/react-scroll 
 ```json
 "scripts": {
     ...,
+    "build": "tsc && vite build --output build",
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install --legacy-peer-deps && npm run lint"
