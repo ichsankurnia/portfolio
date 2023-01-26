@@ -1,6 +1,7 @@
 import content from "."
 
-const imgPath = `${process.env.PUBLIC_URL}/assets/project`
+// const imgPath = `${process.env.PUBLIC_URL}/assets/project`
+const imgPath = `/assets/project`
 
 const projectContent = [
     {
@@ -53,6 +54,14 @@ const projectContent = [
         title: 'Part Time / Freelance',
         desc: content.work.desc,
         projects: [
+            {
+                img_thumb: imgPath + '/ubs.png',
+                title: 'UBS Gold - Monitoring Power',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                long_desc: '',
+                tools_tech: ['Vite', 'ReactJS', 'Context-API', 'Redux', 'Typescript', 'TailwindCSS', 'Dashboard'],
+                private: true
+            },
             {
                 img_thumb: imgPath + '/fms.png',
                 title: 'Agroobot - Farm Management System (FMS)',

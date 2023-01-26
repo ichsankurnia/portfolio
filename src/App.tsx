@@ -22,6 +22,7 @@ function App() {
       }
     }
 
+    // console.log(process.env.npm_config_local_prefix)
     fetchVisitor()
   }, [])
 

@@ -1,6 +1,6 @@
 {
   "short_name": "Ichsankurnia Portfolio",
-  "name": "React App Portfolio with TailwindCSS",
+  "name": "React App Portfolio Vite and TailwindCSS",
   "icons": [
     {
       "src": "assets/sign.jpg",
