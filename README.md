@@ -69,7 +69,6 @@ npm i -D @types/node @types/react-lazy-load-image-component @types/react-scroll 
 ```json
 "scripts": {
     ...,
-    "build": "tsc && vite build --output build",
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install --legacy-peer-deps && npm run lint"
@@ -467,9 +466,6 @@ export default defineConfig({
   define: {
     "process.env": process.env,
     // "process.env.PUBLIC_URL": process.env.npm_config_local_prefix,
-  },
-  build: {
-    outDir: '../build'
   }
 })
 ```
@@ -482,6 +478,8 @@ npm install -D tailwindcss postcss autoprefixer && npx tailwindcss init -p
 
 
 ```js
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
