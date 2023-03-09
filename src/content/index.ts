@@ -115,11 +115,6 @@ const content = {
 		desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 		socials: [
 			{
-				alt: 'wa',
-				img: '/assets/wa1.png',
-				url: 'https://wa.me/6282285752959?text=Halo%20Ichsan%20Kurniawan!'
-			},
-			{
 				alt: 'github',
 				img: '/assets/github.png',
 				url: 'https://github.com/ichsankurnia'
@@ -143,12 +138,7 @@ const content = {
 				alt: 'gmail',
 				img: '/assets/gmail.png',
 				url: 'mailto:kurniaichsan45@gmail.com'
-			},
-			{
-				alt: 'cv',
-				img: '/assets/cv.png',
-				url: '/assets/cv_ichsan_kurniawan_2022.pdf'
-			},
+			}
 		],
 		// img: 'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
 		img: '/assets/contactImg.jpg',

@@ -3,9 +3,9 @@
   "name": "React App Portfolio Vite and TailwindCSS",
   "icons": [
     {
-      "src": "assets/sign.jpg",
-      "type": "image/jpg",
-      "sizes": "222x222"
+      "src": "assets/chigiri.png",
+      "type": "image/png",
+      "sizes": "495x495"
     }
   ],
   "start_url": ".",
