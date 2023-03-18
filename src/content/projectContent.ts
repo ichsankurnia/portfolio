@@ -5,7 +5,7 @@ const imgPath = `/assets/project`
 
 const projectContent = [
     {
-        title: 'PT Nutech Integrasi',
+        title: 'PT Nutech Integrasi (Telkom Group)',
         desc: content.work.desc,
         projects: [
             {
@@ -324,6 +324,14 @@ const projectContent = [
         title: 'Other Project',
         desc: content.work.desc,
         projects: [
+            {
+                img_thumb: imgPath + '/chatgpt.png',
+                title: 'OpenAI ChatGPT Messengger Clone',
+                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+                long_desc: '',
+                tools_tech: ['NextJS', 'NextJS13', 'NextAuth', 'useSWR', 'Firebase', 'Typescript', 'TailwindCSS'],
+                private: true
+            },
             {
                 img_thumb: imgPath + '/google-calendar.png',
                 title: 'Google Calendar Clone',
