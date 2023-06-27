@@ -32,22 +32,22 @@ const projectContent = [
                 tools_tech: ['NodeJS', 'Express', 'Socket-IO', 'PostgreSQL', 'ReactJS', 'Redux', 'Ant Design', 'CMS'],
                 private: true
             },
-            {
-                img_thumb: imgPath + '/pwa_wheater_app.png',
-                title: 'Vending Machine Bus Management System (BMS) Angkasa Pura II (AP2)',
-                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-                long_desc: '',
-                tools_tech: ['C#', 'WPF', 'Kiosk'],
-                private: true
-            },
-            {
-                img_thumb: imgPath + '/myhce/1.jpg',
-                title: 'Mobile App Host-base Card Emulation (HCE)',
-                short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-                long_desc: '',
-                tools_tech: ['Android', 'Kotlin', 'NFC'],
-                private: true
-            }
+            // {
+            //     img_thumb: imgPath + '/pwa_wheater_app.png',
+            //     title: 'Vending Machine Bus Management System (BMS) Angkasa Pura II (AP2)',
+            //     short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            //     long_desc: '',
+            //     tools_tech: ['C#', 'WPF', 'Kiosk'],
+            //     private: true
+            // },
+            // {
+            //     img_thumb: imgPath + '/myhce/1.jpg',
+            //     title: 'Mobile App Host-base Card Emulation (HCE)',
+            //     short_desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+            //     long_desc: '',
+            //     tools_tech: ['Android', 'Kotlin', 'NFC'],
+            //     private: true
+            // }
         ]
     },
     {
