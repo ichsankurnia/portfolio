@@ -21,6 +21,8 @@ const content = {
 			2000,
 			'BackEnd Developer.. 🖥',
 			2000,
+			'UX Designer 🖥',
+			2000,
 			'Desktop Developer 🖥',
 			2000,
 		],
