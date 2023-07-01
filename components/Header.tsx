@@ -1,0 +1,47 @@
+'use client'
+
+import Image from 'next/image';
+import Typical from 'react-typical'
+import { Link as ScrollLink } from 'react-scroll';
+import content from '@/data';
+import useStartAnimation from '@/hooks/useStartAnimation';
+
+const Header = () => {
+    const animated = useStartAnimation()
+
+    return (
+        <div
+            className='min-h-screen flex justify-center items-center' id='home'
+            style={{ backgroundColor: '#091c29' }}
+        >
+            <div className='w-10/12 mx-auto flex flex-col md:flex-row-reverse justify-between items-center'>
+                <div className='w-full md:w-2/6'>
+                    <Image
+                        src={content.header.img}
+                        alt=""
+                        className='w-full mx-auto rounded-lg'
+                        priority
+                        quality={100}
+                        width={0} height={0} sizes='100vw'
+                    />
+                </div>
+                <div className='text-white font-dosis text-center md:text-left mt-2 md:mt-0'>
+                    <h2 className={`${animated ? '' : 'translate-y-10 opacity-0'} transform transition duration-2000 text-3xl md:text-4xl lg:text-6xl font-bold`}>
+                        {content.header.text[0]}<br />
+                        {content.header.text[1]}
+                    </h2>
+                    <h1 className={`${animated ? '' : 'translate-y-20 opacity-0'} transform transition duration-2000 text-2xl md:text-4xl text-gray-300 md:mt-5`}>
+                        {content.header.text[2]}{' '}
+                        {/* @ts-ignore */}
+                        <Typical className='inline-block' steps={content.header.typical} loop={Infinity} />
+                    </h1>
+                    <ScrollLink to='about' smooth={true}>
+                        <button className='bg-indigo-500 px-10 py-3 text-xl mt-10 uppercase rounded-lg animate-float hover:bg-indigo-300 anim'>{content.header.btnText}</button>
+                    </ScrollLink>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Header
