@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'UX Portfolio | Ichsankurnia',
     icons: [
         { rel: "icon", type: 'image/png', url: "/chigiri.png" },
-        { rel: "apple-touch-icon", type: 'image/png', url: "/assets/ux/mytrailer.png" }
+        { rel: "apple-touch-icon", type: 'image/png', url: "/mytrailer.png" }
     ],
 }
 
