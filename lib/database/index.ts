@@ -1,4 +1,4 @@
-import mongoose, { MongooseError } from "mongoose";
+import mongoose from "mongoose";
 
 // MONGODB CONNECTTION
 const { MONGODB_NAME, MONGODB_USER, MONGODB_PASS } = process.env
