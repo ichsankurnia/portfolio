@@ -67,7 +67,7 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                                 </thead>
                                 <tbody>
                                     {data.rows.map((item, key) =>
-                                        <tr key={key}>
+                                        <tr key={key} className='hover:bg-gray-100 dark:hover:bg-gray-900'>
                                             {/* <td className='px-3 py-2'>{key + 1 + ((Number(page) || 1 - 1) * Number(limit) || 10)}</td> */}
                                             <td className='px-3 py-2'>{((Number(page || 1) - 1) * Number(limit || 10)) + key + 1}</td>
                                             <td className='px-3 py-2'>{dayjs(item.visit_time).format('YYYY-MM-DD HH:mm:ss')}</td>

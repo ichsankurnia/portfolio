@@ -50,7 +50,7 @@ const content = {
 			{
 				img: '/assets/nodejs.png',
 				alt: 'node',
-				url: 'https://nodejs.org'
+				url: 'https://nodejs.org/en/about'
 			},
 			{
 				img: '/assets/nextjs.png',

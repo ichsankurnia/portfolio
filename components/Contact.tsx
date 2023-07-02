@@ -38,6 +38,7 @@ const Contact = () => {
                     height={0}
                     width={0}
                     sizes='100vw'
+                    quality={100}
                     className='w-[250px] my-10 transition duration-3000 ease-in-out rounded-lg'
                 />
             </div>

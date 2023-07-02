@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import { FaDesktop, FaDatabase, FaTools } from "react-icons/fa";
 import content from '@/data';
+import Link from 'next/link';
 
 const About = () => {
     return (
         <div className='min-h-screen flex flex-col-reverse md:flex-row justify-evenly items-center font-dosis bg-soft dark:bg-black' id='about'>
             <div className='w-11/12 md:w-2/5 flex flex-wrap justify-center mt-10 md:mt-0'>
                 {content.stack.tech.map((tech, index) => (
-                    <span key={index}
+                    <Link href={tech.url} key={index} target="_blank" rel="noopener noreferrer"
                         className={`${index % 2 === 0 ? 'animate-float' : 'animate-refloat'} w-32 h-32 m-4 p-4 bg-soft dark:bg-gray-500 shadow-2xl hover:shadow dark:hover:shadow-softBlack flex justify-center items-center rounded-full cursor-pointer anim`}>
                         <Image src={tech.img} alt={tech.alt} width={0} height={0} sizes='100vw' className='w-full' />
-                    </span>
+                    </Link>
                 ))}
             </div>
             <div className='w-5/6 md:w-2/5 mt-10'>
