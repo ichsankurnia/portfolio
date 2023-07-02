@@ -21,7 +21,7 @@ async function getData(current_page?: string, limit?: string) {
     // const data = await VisitModel.find()
     const currentPage = Number(current_page) || 1
     const limitPage = Number(limit) || 10
-    const data = await VisitModel.find().sort('visit_time').skip((currentPage - 1) * limitPage).limit(limitPage)
+    const data = await VisitModel.find().sort({ _id: -1 }).skip((currentPage - 1) * limitPage).limit(limitPage)
     const total_rows = await VisitModel.countDocuments()
     return { rows: data, total_rows }
 }
@@ -32,6 +32,8 @@ type Props = {
 const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
     const data = await getData(page as string, limit as string)
 
+    // await new Promise(resolve => setTimeout(resolve, 100000))
+
     return (
         <>
             <div className='w-11/12 md:w-10/12 2xl:w-8/12 mx-auto flex flex-col font-dosis p-5 2xl:py-10 min-h-screen'>
@@ -39,7 +41,7 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                     <Link href='/' className='text-3xl font-bold cursor-pointer'>{content.nav.logo}{' '}
                         <span className='w-3 h-3 bg-red-500 rounded-full inline-block'></span>
                     </Link>
-                    <h1 className='font-bold text-xl md:text-3xl'>Visitor Information</h1>
+                    <h1 className='font-bold text-xl md:text-3xl'>MyVisitor</h1>
                 </div>
                 <div className='mt-12 2xl:mt-16'>
                     <div className='overflow-x-auto rounded-2xl'>
@@ -47,6 +49,7 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                             <table className='align-middle w-max min-w-full'>
                                 <thead>
                                     <tr className='border-b border-gray-200 dark:border-gray-700'>
+                                        <th className='px-3 py-3'>#</th>
                                         <th className='px-3 py-3'>Visit Time</th>
                                         <th className='px-3 py-3'>Device</th>
                                         <th className='px-3 py-3'>Browser</th>
@@ -65,6 +68,8 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                                 <tbody>
                                     {data.rows.map((item, key) =>
                                         <tr key={key}>
+                                            {/* <td className='px-3 py-2'>{key + 1 + ((Number(page) || 1 - 1) * Number(limit) || 10)}</td> */}
+                                            <td className='px-3 py-2'>{((Number(page || 1) - 1) * Number(limit || 10)) + key + 1}</td>
                                             <td className='px-3 py-2'>{dayjs(item.visit_time).format('YYYY-MM-DD HH:mm:ss')}</td>
                                             <td className='px-3 py-2'>{item.device}</td>
                                             <td className='px-3 py-2'>{item.browser}</td>
@@ -86,7 +91,8 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                             <div>Oops no data found.</div>
                         }
                     </div>
-                    <PaginationPageSize currentPage={Number(page)} totalRows={data.total_rows} path='/visitor-information' />
+                    {/* <div className='font-semibold mt-5 -mb-2'>{data?.total_rows} data found.</div> */}
+                    <PaginationPageSize currentPage={Number(page)} totalRows={data.total_rows} path='/visitor' />
                 </div>
             </div>
         </>
