@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import dayjs from 'dayjs';
 import content from '@/data';
 import VisitModel from '@/lib/database/visit'
-import dayjs from 'dayjs';
 import PaginationPageSize from '@/components/pagination/PaginationPageSize';
 
 async function getData(current_page?: string, limit?: string) {
@@ -66,7 +66,7 @@ const Page: FC<Props> = async ({ searchParams: { page, limit } }) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {data.rows.map((item, key) =>
+                                    {data.rows.map((item: any, key: number) =>
                                         <tr key={key} className='hover:bg-gray-100 dark:hover:bg-gray-900'>
                                             {/* <td className='px-3 py-2'>{key + 1 + ((Number(page) || 1 - 1) * Number(limit) || 10)}</td> */}
                                             <td className='px-3 py-2'>{((Number(page || 1) - 1) * Number(limit || 10)) + key + 1}</td>

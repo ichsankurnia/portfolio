@@ -1,8 +1,8 @@
-import { type Metadata } from 'next';
 import { FC } from 'react';
+import { type Metadata } from 'next';
+import Link from 'next/link';
 import content from '@/data';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: 'UX Portfolio | Ichsankurnia',
@@ -31,7 +31,7 @@ const Page: FC<Props> = () => {
                             Through UX Design course by Google, we were given the task of selecting a subject to work on, and my subject is a mobile application that displays and browses movie trailers.
                             Movie Trailer App (MyTrailer) is an application that makes it easy for users to find movies they want to watch in a cinema, watch trailers, view release schedules and search for cinemas showing the film.
                         </p>
-                        <Link href='/ux-porto/detail' className='font-bold hover:text-indigo-600 hover:underline anim'>Live View</Link>
+                        <Link href='/ux-porto/detail' className='font-bold text-indigo-600 hover:text-indigo-400 hover:underline anim'>Live View</Link>
                     </div>
                     <Image alt='mytrailer' src='/assets/ux/mytrailer.png' width={0} height={0} sizes='100vw' priority
                         className='w-full md:w-5/12 h-64 md:h-full object-cover rounded-b-2xl md:rounded-b-none md:rounded-r-2xl'
